@@ -1,0 +1,180 @@
+:root {
+    font-size: 10px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #F3F5FC;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    box-sizing: border-box;
+}
+
+header h1 {
+    padding: 4.5%;
+}
+
+.container {
+    width: 100%;
+    height: 85%
+}
+
+.section-input form {
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-input form textarea {
+    width: 100%;
+    height: fit-content;
+    line-height: 120%;
+    color: #0A3871;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.btns-actions {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btns-actions p {
+    text-align: left;
+    color: #65747D;
+}
+
+.btn {
+    border-radius: 24px;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-blue {
+    color: #FFF;
+    background: #0A3871;
+    transition: 1s all;
+}
+
+.btn-blue:hover {
+    background: #356EA9;
+}
+
+.btn-gray {
+    color: #0A3871;
+    background: #FFFF;
+    border: 1px solid #0A3871;
+    transition: 1s all;
+}
+
+.btn-gray:hover {
+    background: #D8DFE8;
+}
+
+.section-result {
+    background: #FFF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 5% auto;
+    border: none;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+.result-placeholder p:nth-child(2) {
+    line-height: 120%;
+    font-weight: bold;
+    color: #343A40;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.result-placeholder p:nth-child(3) {
+    line-height: 120%;
+    color: #495057;
+    padding-bottom: 5%;
+    box-sizing: border-box;
+}
+
+
+footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    color: #FFF;
+    background: #343A40;
+    align-items: center;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+}
+
+/*Styles for mobil device view*/
+@media screen and (max-width:480px) {
+    header {
+        width: 100%;
+        height: 10%;
+    }
+
+    header h1 img {
+        height: 5vh;
+    }
+
+    .section-input {
+        width: 100%
+    }
+
+    .section-input form textarea {
+        font-size: 2.4rem;
+    }
+
+    .btns-actions p {
+        font-size: 1.2rem;
+    }
+
+    .btns-actions p span {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 1.8rem;
+        padding: 2rem;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .section-result {
+        width: 90%;
+        height: 35%;
+    }
+
+    .result-placeholder img {
+        display: none;
+    }
+
+    .result-placeholder p:nth-child(2) {
+        font-size: 2.4rem;
+    }
+
+    .result-placeholder p:nth-child(3) {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        font-size: 1.6rem;
+    }
+}
