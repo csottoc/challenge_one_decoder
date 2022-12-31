@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge One!</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1> <img src="img/logo.svg" alt="logo of Alura"> </h1>
+    </header>
+    <main class="container">
+        <section class="section-input">
+            <form name="form" id="forms">
+            <textarea id="input-message" cols="1" rows="5" maxlength="140" required placeholder="Ingrese el texto aqui..."></textarea>
+
+            <div class="btns-actions">
+                <p> <span>&#128712;</span>Tamaño máximo de 140 caracteres, solo letras minúsculas y sin acentos</p>
+                
+                <button id="btnEncrypt" type="submit" class="btn btn-blue">Encriptar</button>
+                <button class="btn btn-gray">Desencriptar</button>
+
+            </div>
+        </form>
+        </section>
+        <section id="message-result" class="section-result">
+            <div class="result-placeholder">
+                <img src="img/search.svg" alt="Web illustrations by Storyset">
+                <p><strong>Ningún mensaje fue encontrado</strong></p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>    
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">&copy; CopyRight Camilo J.Soto C. - 2022</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
