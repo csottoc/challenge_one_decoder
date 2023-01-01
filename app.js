@@ -9,7 +9,7 @@ document.body.onload = function () {
 
 //Valid that message has 140 number of characters
 function messageValidator(msg) {
-    if (msg.length <= 140) {
+    if (msg.length <= 250) {
         return true
     } else {
         return false
@@ -50,6 +50,26 @@ function encryptWord(word) {
 
 }
 
+//Search for matches between keys and a word, then returns the decrypted word.
+function decryptWord(word) {
+    let newWord = word;
+
+    for (let i = 0; i < vowelsKeys.length; i++) {
+
+        const vKey = vowelsKeys[i];
+        const vowel = vowels[i];
+        const re = new RegExp(vKey, 'g');
+        let letterMatch = newWord.match(re);
+
+        if (letterMatch != null) {
+            newWord = replaceLetters(vKey, vowel, newWord);
+        }
+
+    }
+
+    return newWord;
+}
+
 //Gets the reference of the buttons with class .btn
 const buttons = document.querySelectorAll(".btn");
 
@@ -81,16 +101,18 @@ form.onsubmit = function (e) {
 
     if (messageValidator) {
 
-        if (selectedOption == "Encriptar") {
-            let resultArray = [];
-            for (word of wordArray) {
+        let resultArray = [];
+        for (word of wordArray) {
+
+            if (selectedOption == "Encriptar") {
                 resultArray.push(encryptWord(word));
+            }
+
+            if (selectedOption == "Desencriptar") {
+                resultArray.push(decryptWord(word));
             }
             messageResult(resultArray);
         }
 
-        if (selectedOption == "Desencriptar") {
-            console.log("work in progress...")
-        }
     }
 }
