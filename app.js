@@ -84,12 +84,33 @@ buttons.forEach(button => {
     })
 });
 
+//Functionality to copy text and send it to the clipboard
+function copyText(element) {
+    navigator.clipboard.writeText(element)
+    .then(() => {
+        alert('Texto copiado!');
+    })
+    .catch(() => {
+        alert('No se puede copiar el texto!',err);
+    })
+}
+
+//Trigger for button copy
+function btnCopy() {
+    let element = document.getElementById('msgResult').value;
+    copyText(element);
+}
+
 //Sends the resulting message to the DOM
 function messageResult(message) {
     let encryptMessage = "";
     encryptMessage = message.toString().replace(/,/g, " ");
     console.log(encryptMessage);
-    document.getElementById('message-result').innerHTML = '<textarea cols="1" rows="5" maxlength="140" class="message-result">' + encryptMessage + '</textarea>';
+    document.getElementById('message-result').innerHTML = `<div class="message-result">
+    <textarea id="msgResult" cols="1" rows="5" maxlength="140" readonly>${encryptMessage}</textarea>
+    <button type="submit" onclick="btnCopy()" class="btn btn-copy">Copiar</button>
+    </div>
+    `;
 }
 
 

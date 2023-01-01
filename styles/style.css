@@ -104,14 +104,13 @@ header h1 {
     box-sizing: border-box;
 }
 
-.message-result{
+.message-result {
     width: 95%;
     height: 95%;
     margin: auto;
-    font-size: 1.8rem;
     border: none;
     background: transparent;
-  }
+}
 
 footer {
     width: 100%;
@@ -160,7 +159,7 @@ footer {
         width: 100%;
     }
 
-    .btns-actions{
+    .btns-actions {
         box-sizing: border-box;
         padding-top: 1.6rem;
         height: 40%;
@@ -193,10 +192,12 @@ footer {
     }
 
     /*message result*/
-    .message-result{
-        
+    .message-result textarea {
+        border: none;
+        width: 90%;
+        font-size: 1.8rem;
+        height: 75%
     }
-
 
     footer {
         font-size: 1.6rem;
